@@ -12,15 +12,15 @@ class DashboardHeader extends Component {
 
   constructor(props) {
     super(props);
-
-    this.state = {
+  this.state = {
       navOpen : true
     };
+  this.handleDrawer = this.handleDrawer.bind(this);
   }
 
-  handleDrawer() {
-    this.setState ({navOpen: !(this.state.navOpen)});
-  }
+  handleDrawer(){
+    this.setState({navOpen: (!this.state.navOpen)});
+  };
 
   render() {
     return (
