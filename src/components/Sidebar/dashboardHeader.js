@@ -26,7 +26,6 @@ class DashboardHeader extends Component {
     return (
       <div>
       <MuiThemeProvider>
-
       <AppBar style = {zIndex} title = "Plan Sponser Center"
       onLeftIconButtonClick = {this.handleDrawer}
       iconClassNameRight="muidocs-icon-navigation-expand-more" />

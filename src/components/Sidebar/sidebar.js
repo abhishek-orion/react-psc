@@ -11,7 +11,6 @@ import DashboardHeader from './dashboardHeader';
 //import history from '../../History/history';
 
 var style = {
-  marginTop: "64px",
   zIndex: "-1"
 };
 
