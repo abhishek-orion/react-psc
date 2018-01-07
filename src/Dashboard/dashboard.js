@@ -33,7 +33,7 @@ class Dashboard extends Component {
 
   render (){
     return (
-      <div className = "container widthAuto">
+      <div className = "widthAuto">
               <DashboardHeader/>
                     <div className = "row dashboardContainer">
                           <div className = "col-md-12">
