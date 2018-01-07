@@ -28,7 +28,7 @@ class LoginBox extends Component {
     };
   }
 
-  handleChange = (value) => {
+  handleChange (value) {
       this.setState({
         role: value,
       });
@@ -43,7 +43,7 @@ class LoginBox extends Component {
         className = "loginTab">
       <Tab label="Sponsor Login" value="sponsor">
       <div className = "loginBox">
-        <form>
+        <form className = "form-style">
             <TextField  floatingLabelText = "Enter Username" hintText = "Username"/>
             <PasswordField className = "width-256" floatingLabelText = "Enter Password" hintText = "Max 8 Characters"/>
             <RaisedButton className = "textLeft" label = "Login"/>
@@ -52,7 +52,7 @@ class LoginBox extends Component {
       </Tab>
       <Tab label="Participant Login" value="participant">
       <div className = "loginBox">
-        <form>
+        <form className = "form-style">
             <TextField  floatingLabelText = "Enter Username" hintText = "Username"/>
             <PasswordField className = "width-256" floatingLabelText = "Enter Password" hintText = "Max 8 Characters"/>
             <RaisedButton className = "textLeft" label = "Login"/>

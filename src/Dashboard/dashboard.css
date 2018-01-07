@@ -1,11 +1,16 @@
 .widthAuto {
-  width: auto;
-  padding-left: 0px;
-  padding-right: 0px;
+  width: auto !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  height: auto !important;
 }
 
 .dashboardContainer {
 
   width: 78%;
-  margin-left: 20%;
+  margin-left: 20% !important;
+}
+
+.panels {
+  height: 150px;
 }

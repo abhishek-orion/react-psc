@@ -1,6 +1,5 @@
 .loginBox {
   margin: 20px;
-  float: right;
   padding-left: 35px;
 }
 
@@ -15,4 +14,8 @@ margin-top: 20px;
 
 .loginTab {
   width: 30%;
+}
+
+.form-style {
+  display: table-caption;
 }

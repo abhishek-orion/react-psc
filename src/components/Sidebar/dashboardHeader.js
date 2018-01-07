@@ -18,7 +18,7 @@ class DashboardHeader extends Component {
     };
   }
 
-  handleDrawer = () => {
+  handleDrawer() {
     this.setState ({navOpen: !(this.state.navOpen)});
   }
 

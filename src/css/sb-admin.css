@@ -299,6 +299,22 @@ table.dataTable thead .sorting:after {
     line-height: 1.33;
 }
 
+.blue {
+  background: #337ab7 !important;
+}
+
+.green {
+  background: #5cb85c !important;
+}
+
+.yellow {
+  background: #f0ad4e !important;
+}
+
+.red {
+  background: #d9534f !important;
+}
+
 .show-grid [class^=col-] {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -308,6 +324,26 @@ table.dataTable thead .sorting:after {
 
 .show-grid {
     margin: 15px 0;
+}
+
+.icons {
+  padding: 10px;
+  color: white;
+  font-size: 1.3em;
+}
+
+.divider{
+  width: inherit;
+  margin-top: 0px !important;
+  margin-left: 21%;
+  margin-right: 3%;
+}
+
+.panel-text{
+  float: right;
+  padding: 10px;
+  color: white;
+  font-size: 1.3em;
 }
 
 .huge {
