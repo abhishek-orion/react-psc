@@ -1,0 +1,25 @@
+.width-70 {
+  width: 70%;
+}
+
+.loginContainer {
+  display: -webkit-inline-box;
+  margin-top: 0em;
+}
+
+.white-background {
+  background: white;
+}
+.header-logo {
+  height: 90px;
+}
+
+.smoothing {
+  -webkit-font-smooting: "Antianalyzed"
+}
+.wrap {
+  height: 445px;
+  z-index: -2;
+  position: absolute;
+  background: #ebebeb;
+}

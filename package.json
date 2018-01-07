@@ -1,0 +1,28 @@
+{
+  "name": "react-psc",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
+    "classnames": "^2.2.5",
+    "history": "^4.7.2",
+    "material-ui": "^0.20.0",
+    "material-ui-password-field": "^1.4.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.32.0",
+    "react-dom": "^16.2.0",
+    "react-icons": "^2.2.7",
+    "react-responsive-carousel": "^3.1.30",
+    "react-router": "^3.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "redux-history": "^1.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

@@ -1,0 +1,18 @@
+.loginBox {
+  margin: 20px;
+  float: right;
+  padding-left: 35px;
+}
+
+.width-256 {
+  width: 256px !important;
+}
+
+.textLeft {
+text-align: left;
+margin-top: 20px;
+}
+
+.loginTab {
+  width: 30%;
+}
