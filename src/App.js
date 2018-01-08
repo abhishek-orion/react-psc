@@ -6,6 +6,7 @@ import LoginPage from './LoginPage/LoginPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router';
 import Dashboard from './Dashboard/dashboard';
+import CaseManagement from './Casemanagment/CaseList';
 
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
       <Router history={hashHistory}>
         <Route path='/' component={LoginPage} />
         <Route path='/Dashboard' component={Dashboard} />
+        <Route path='/CaseManagement' component={CaseManagement} />
       </Router>
         </div>
       </div>

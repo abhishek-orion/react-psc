@@ -13,10 +13,16 @@ class DashboardHeader extends Component {
   constructor(props) {
     super(props);
   this.state = {
-      navOpen : true
+      navOpen : true,
+      pageSelected: this.props.pageSelected
     };
   this.handleDrawer = this.handleDrawer.bind(this);
+  this.changePage = this.changePage.bind(this);
   }
+
+  changePage(menuClicked){
+    this.props.pageSelected(menuClicked);
+  };
 
   handleDrawer(){
     this.setState({navOpen: (!this.state.navOpen)});
@@ -29,7 +35,7 @@ class DashboardHeader extends Component {
       <AppBar style = {zIndex} title = "Plan Sponser Center"
       onLeftIconButtonClick = {this.handleDrawer}
       iconClassNameRight="muidocs-icon-navigation-expand-more" />
-      <Sidebar barOpen = {this.state.navOpen}/>
+      <Sidebar pageSelectedUpdate = {this.changePage} barOpen = {this.state.navOpen}/>
       </MuiThemeProvider>
       </div>
     );

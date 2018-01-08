@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 //import ErrorMessage from './ErrorMessage'
 //import LoadingButton from './LoadingButton'
+import {Link} from 'react-router';
 import RaisedButton from 'material-ui/RaisedButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextField from 'material-ui/TextField';
@@ -46,7 +47,9 @@ class LoginBox extends Component {
         <form className = "form-style">
             <TextField  floatingLabelText = "Enter Username" hintText = "Username"/>
             <PasswordField className = "width-256" floatingLabelText = "Enter Password" hintText = "Max 8 Characters"/>
-            <RaisedButton className = "textLeft" label = "Login"/>
+            <Link to="/dashboard">
+              <RaisedButton className = "textLeft" label = "Login"/>
+            </Link>
         </form>
       </div>
       </Tab>
@@ -55,7 +58,9 @@ class LoginBox extends Component {
         <form className = "form-style">
             <TextField  floatingLabelText = "Enter Username" hintText = "Username"/>
             <PasswordField className = "width-256" floatingLabelText = "Enter Password" hintText = "Max 8 Characters"/>
-            <RaisedButton className = "textLeft" label = "Login"/>
+              <Link to="/dashboard">
+                <RaisedButton className = "textLeft" label = "Login"/>
+             </Link>
         </form>
       </div>
       </Tab>
