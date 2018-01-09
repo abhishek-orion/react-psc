@@ -11,6 +11,11 @@
   margin-left: 20% !important;
 }
 
+.bodyMarginLeft {
+  margin-left: 20px
+}
+
+
 .panels {
   height: 150px;
 }

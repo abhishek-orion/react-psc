@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import DashboardMain from './dashboardmain';
 import CaseManagement from '../Casemanagment/CaseList';
+import CaseDetails from '../Casemanagment/CaseDetails';
+
 var Page;
 
 
@@ -9,21 +11,35 @@ class ContentBodyLoader extends Component {
 
   constructor (props) {
     super (props);
+    this.reRenderComponent = this.reRenderComponent.bind(this);
+    this.loadCaseDetails = this.loadCaseDetails.bind(this);
   }
 
-  render (){
+  loadCaseDetails(selectedCase){
+  //  this.props.selectedPage = selectedCase;
+    this.setState({selectedPage:"CaseDetails"});
+    this.props.loadCaseDetails(selectedCase);
+  }
 
-    if(this.props.selectedPage == "Dashboard"){
-      console.log("This is Dashboard");
-    }
-    else{
-      console.log("This is something else");
+ reRenderComponent(){
+//   this.forceUpdate();
+ }
+
+
+
+  render (){
+    if(this.props.selectedPage == 'Dashboard'){
+      Page = DashboardMain;
+    }else if(this.props.selectedPage == 'CaseList'){
+        Page = CaseManagement;
+    }else if(this.props.selectedPage == 'CaseDetails'){
+        Page = CaseDetails;
     }
 
     return (
-      <div>
+      <div id="contentBody">
        {
-        this.props.selectedPage == 'Dashboard' ? <DashboardMain/> : <CaseManagement/>
+        <Page caseId = {this.props.caseId} loadCaseDetails = {this.loadCaseDetails} />
        }
       </div>
     );

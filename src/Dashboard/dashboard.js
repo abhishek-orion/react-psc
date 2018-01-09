@@ -26,10 +26,11 @@ class Dashboard extends Component {
     super (props);
 
     this.state = {
-      pageSelected: "Dashboard1"
+      pageSelected: "Dashboard",
     };
 
-    this.setPageSelected = this.setPageSelected .bind(this);
+    this.setPageSelected = this.setPageSelected.bind(this);
+    this.loadCaseDetails = this.loadCaseDetails.bind(this);
 
   };
 
@@ -37,12 +38,18 @@ setPageSelected(page){
   this.setState({pageSelected: page});
 }
 
+loadCaseDetails(caseId){
+    this.setState({pageSelected: 'CaseDetails',
+                  requestId : caseId
+                });
+}
+
 
   render (){
     return (
       <div className = "widthAuto">
               <DashboardHeader pageSelected = {this.setPageSelected}/>
-              <ContentBody selectedPage = {this.state.pageSelected}/>
+              <ContentBody caseId = {this.state.requestId} loadCaseDetails = {this.loadCaseDetails} selectedPage = {this.state.pageSelected}/>
       </div>
     );
   }

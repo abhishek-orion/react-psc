@@ -9,6 +9,7 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
 import DashboardHeader from './dashboardHeader';
+import ReactDOM from 'react-dom';
 //import history from '../../History/history';
 
 var style = {
@@ -20,7 +21,8 @@ class Sidebar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        casemnagementPage : "CaseManagement"
+        caseListPage : "CaseList",
+        dashboardPage : "Dashboard"
     };
 
     this.setMenuSelected = this.setMenuSelected.bind(this);
@@ -28,6 +30,7 @@ class Sidebar extends Component {
   };
 
   setMenuSelected(menuClicked){
+    var myDiv = document.getElementById('contentBody');
     this.props.pageSelectedUpdate(menuClicked);
   };
 
@@ -37,10 +40,10 @@ class Sidebar extends Component {
       <MuiThemeProvider >
           <Drawer open = {this.props.barOpen} style = {style} >
           <div id="sidebar" className = "margin-64">
-            <MenuItem >Dashboard</MenuItem>
+            <MenuItem onClick= {() => this.setMenuSelected(this.state.dashboardPage)} >Dashboard</MenuItem>
             <MenuItem>Employee</MenuItem>
             <MenuItem>Investments</MenuItem>
-            <MenuItem onClick= {() => this.setMenuSelected(this.state.casemnagementPage)}>
+            <MenuItem onClick= {() => this.setMenuSelected(this.state.caseListPage)}>
                 Case Management
             </MenuItem>
             </div>
